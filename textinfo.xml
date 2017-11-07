@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description rdf:about="" xmlns="http://namespace.corel.com/Cdr/metadata">
+            <ObjectNames>
+                <rdf:Bag />
+            </ObjectNames>
+            <LayerNames>
+                <rdf:Bag>
+                    <rdf:li>图层 1</rdf:li>
+                </rdf:Bag>
+            </LayerNames>
+            <PageNames>
+                <rdf:Bag />
+            </PageNames>
+            <TextData>
+                <TextStream>
+                    <TextRun lang="2052" break="para">基于数字网络技术对环境电磁辐射强度实时可视化探究</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">        电磁辐射，一个日久不衰的话题。很多人被爆炸般的信息所迷惑，随着新闻业的发</TextRun>
+                    <TextRun lang="2052" break="line">展，电磁辐射对人体的危害在无形中被扩大，很多人甚至对此还产生了恐惧心理。为</TextRun>
+                    <TextRun lang="2052" break="line">此，便携式高频电磁辐射数字可视化研究小组致力于通过手机软件将电磁辐射强度转化</TextRun>
+                    <TextRun lang="2052" break="line">为数字与图像并且在与国家标准安全值比较后确定此辐射对人体是否有危害来增进人们</TextRun>
+                    <TextRun lang="2052" break="line">对电磁辐射的认知，推广先进的科学技术，消除人们不必要的恐惧心理。</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">长沙市雅礼中学</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">创新点</TextRun>
+                    <TextRun lang="1033" break="none">1</TextRun>
+                    <TextRun lang="2052" break="none">.利用网络技术实现对环境电磁辐射强度实时监控</TextRun>
+                    <TextRun lang="1033" break="none">2</TextRun>
+                    <TextRun lang="2052" break="none">.与传统的测试仪器比较，具有便携性和易操作性。</TextRun>
+                    <TextRun lang="1033" break="none">3</TextRun>
+                    <TextRun lang="2052" break="none">.</TextRun>
+                    <TextRun lang="1033" break="none">2D</TextRun>
+                    <TextRun lang="2052" break="none">技术与</TextRun>
+                    <TextRun lang="1033" break="none">3D</TextRun>
+                    <TextRun lang="2052" break="none">视觉效果结合，具有良好的视觉效果。</TextRun>
+                    <TextRun lang="1033" break="none">4</TextRun>
+                    <TextRun lang="2052" break="none">.软件界面清晰明了，方便手机用户测量周边的辐射大小和跟国家标准值比对，传达</TextRun>
+                    <TextRun lang="2052" break="line">   简单直观的高频电磁辐射信息。</TextRun>
+                    <TextRun lang="2052" break="line">  </TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">设计原理</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">       我们利用手机定位原理，电磁探测原理和</TextRun>
+                    <TextRun lang="1033" break="none">Java</TextRun>
+                    <TextRun lang="2052" break="none">语言。在</TextRun>
+                    <TextRun lang="1033" break="none">eclipse</TextRun>
+                    <TextRun lang="2052" break="none">平台上</TextRun>
+                    <TextRun lang="2052" break="line">利用安卓系统提供的接口，调取三维罗盘感应器的三轴数据，进行公式计</TextRun>
+                    <TextRun lang="2052" break="line">算后得出高频电磁辐射的数值并用仪表盘的形式显示。</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">项目简介</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">研究者：李佳若    黄一峰   李凌涵</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">看得见的健康生活</TextRun>
+                </TextStream>
+                <TextStream>
+                    <TextRun lang="2052" break="para">看得见的健康生活</TextRun>
+                </TextStream>
+            </TextData>
+        </rdf:Description>
+    </rdf:RDF>
+</x:xmpmeta>
