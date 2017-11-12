@@ -50,11 +50,11 @@ public class MainActivity extends Activity implements SensorEventListener {
     }
     
     public void start(){
-       // 为系统的磁场传感器注册监听器
+       // 为系统的磁场传感器注册监听器 Register the system's magnetic field sensor for the listener
        sensorManager.registerListener(this,
                sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
                SensorManager.SENSOR_DELAY_GAME);
-       // 为系统的光传感器注册监听器
+       // 为系统的光传感器注册监听器 Register listeners for the system's light sensor
        sensorManager.registerListener(this,
                sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT),
                SensorManager.SENSOR_DELAY_GAME);
