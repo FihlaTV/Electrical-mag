@@ -4,8 +4,8 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
-import android.hardware.SensorManager;
 import android.hardware.SensorEvent;
+import android.hardware.SensorManager;
 import android.hardware.SensorEventListener;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -19,18 +19,18 @@ public class MainActivity extends Activity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		// 得到ActionBar
+		// 得到ActionBar get ActionBar
 		ActionBar actionBar = getActionBar();
-		// 隐藏
+		// 隐藏 hide
 		actionBar.hide();
         setContentView(R.layout.activity_main);
-      //初始化UI控件
+      //初始化UI控件  Initialize the UI control
         etTemerature = (TextView) findViewById(R.id.etTemerature);
         etLight = (TextView) findViewById(R.id.etLight);
         chart5 = (DialChart05View)findViewById(R.id.circle_view2); 
-        // 获取真机的传感器管理服务
+        // 获取真机的传感器管理服务 Get real machine sensor management services
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        // 获取传感器模拟器的传感器管理服务
+        // 获取传感器模拟器的传感器管理服务 Get sensor manager service for sensor simulator
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         	Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ALL);
 	        SwitchButton sb = (SwitchButton) findViewById(R.id.wiperSwitch1);  
@@ -43,8 +43,8 @@ public class MainActivity extends Activity implements SensorEventListener {
 				}else {
 					onPause();
 				}
-	                Log.d("switchButton", state ? "开":"关");  
-	                Toast.makeText(MainActivity.this, state ? "开":"关", Toast.LENGTH_SHORT).show();  
+	                Log.d("switchButton", state ? "开 turn on":"关 turn off");  
+	                Toast.makeText(MainActivity.this, state ? "开 turn on":"关 turn off", Toast.LENGTH_SHORT).show();  
 	            }  
 	        });
     }
@@ -101,17 +101,17 @@ public class MainActivity extends Activity implements SensorEventListener {
         // 判断是哪个传感器发生改变 Determine which sensor is changing
         //光照传感器 light sensor
         if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)) {
-            sb.append("当前光的强度为：");
+            sb.append("当前光的强度为：current brightness");
             sb.append(values[0]);
             etLight.setText(sb.toString());
         }
         //磁场传感器 Magnetic field sensor
         if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)) {
-            sb.append("X方向上的电磁通量：");
+            sb.append("X方向上的电磁通量：Electromagnetic flux in the X direction: ");
             sb.append(values[0] + "\n");
-            sb.append("Y方向上的电磁通量：");
+            sb.append("Y方向上的电磁通量：Electromagnetic flux in the Y direction: ");
             sb.append(values[1] + "\n");
-            sb.append("Z方向上的电磁通量：");
+            sb.append("Z方向上的电磁通量：Electromagnetic flux in the Z direction: ");
             sb.append(values[2]);
             etTemerature.setText(sb.toString());
             float x = Math.abs(values[0]);
