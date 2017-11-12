@@ -58,13 +58,13 @@ public class DialChart05View extends GraphicalView {
 				//绘制边框
 				chart.showRoundBorder();
 						
-				//设置当前百分�?
+				//设置当前百分?
 				chart.getPointer().setPercentage(mPercentage);
 				
 				//设置指针长度
 				chart.getPointer().setLength(0.6f);
 				
-				//增加�?
+				//增加?
 				addAxis();						
 				/////////////////////////////////////////////////////////////
 				addPointer();
@@ -99,7 +99,7 @@ public class DialChart05View extends GraphicalView {
 			}
 			chart.addOuterTicksAxis(0.7f, rlabels);
 			
-			//环形颜色�?
+			//环形颜色?
 			List<Float> ringPercentage = new ArrayList<Float>();				
 			ringPercentage.add( 0.33f);
 			ringPercentage.add( 0.33f);
@@ -111,7 +111,7 @@ public class DialChart05View extends GraphicalView {
 			rcolor.add(Color.rgb(229, 63, 56));	
 			chart.addStrokeRingAxis(0.7f,0.6f, ringPercentage, rcolor);
 									
-			List<String> rlabels2  = new ArrayList<String>();
+			List <String> rlabels2  = new ArrayList<String>();
 			for(int i=0;i<=240;)
 			{
 				if(0 == i || j == 1)
@@ -153,7 +153,7 @@ public class DialChart05View extends GraphicalView {
 			chart.clearAll();
 					
 			mPercentage =  percentage;
-			//设置当前百分�?
+			//设置当前百分%?
 			chart.getPointer().setPercentage(mPercentage);
 			addAxis();						
 			addPointer();
