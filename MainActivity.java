@@ -4,57 +4,57 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements SensorEventListener {
 	
 	private TextView etOrientation, etMagnetic, etTemerature, etLight, etPressure;
-    private SensorManager sensorManager;
-    DialChart05View chart5 = null;
+   	private SensorManager sensorManager;
+   	DialChart05View chart5 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		// µÃµ½ActionBar
+		// å¾—åˆ°ActionBar
 		ActionBar actionBar = getActionBar();
-		// Òş²Ø
+		// éšè—
 		actionBar.hide();
         setContentView(R.layout.activity_main);
-      //³õÊ¼»¯UI¿Ø¼ş
+      //åˆå§‹åŒ–UIæ§ä»¶
         etTemerature = (TextView) findViewById(R.id.etTemerature);
         etLight = (TextView) findViewById(R.id.etLight);
         chart5 = (DialChart05View)findViewById(R.id.circle_view2); 
-        // »ñÈ¡Õæ»úµÄ´«¸ĞÆ÷¹ÜÀí·şÎñ
-        // sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        // »ñÈ¡´«¸ĞÆ÷Ä£ÄâÆ÷µÄ´«¸ĞÆ÷¹ÜÀí·şÎñ
+        // è·å–çœŸæœºçš„ä¼ æ„Ÿå™¨ç®¡ç†æœåŠ¡
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        //Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ALL);
-//        SwitchButton sb = (SwitchButton) findViewById(R.id.wiperSwitch1);  
-//        sb.setOnChangeListener(new OnChangeListener() {  
-//              
-//            @Override  
-//            public void onChange(SwitchButton sb, boolean state) {  
-//            	if (state==true) {
-//            		start();
-//				}else {
-//					onPause();
-//				}
-////                Log.d("switchButton", state ? "¿ª":"¹Ø");  
-////                Toast.makeText(MainActivity.this, state ? "¿ª":"¹Ø", Toast.LENGTH_SHORT).show();  
-//            }  
-//        });
+        // è·å–ä¼ æ„Ÿå™¨æ¨¡æ‹Ÿå™¨çš„ä¼ æ„Ÿå™¨ç®¡ç†æœåŠ¡
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        	Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ALL);
+	        SwitchButton sb = (SwitchButton) findViewById(R.id.wiperSwitch1);  
+	        sb.setOnChangeListener(new OnChangeListener() {  
+              
+            @Override  
+            public void onChange(SwitchButton sb, boolean state) {  
+            	if (state==true) {
+            		start();
+				}else {
+					onPause();
+				}
+	                Log.d("switchButton", state ? "å¼€":"å…³");  
+	                Toast.makeText(MainActivity.this, state ? "å¼€":"å…³", Toast.LENGTH_SHORT).show();  
+	            }  
+	        });
     }
     
     public void start(){
-       // ÎªÏµÍ³µÄ´Å³¡´«¸ĞÆ÷×¢²á¼àÌıÆ÷
+       // ä¸ºç³»ç»Ÿçš„ç£åœºä¼ æ„Ÿå™¨æ³¨å†Œç›‘å¬å™¨
        sensorManager.registerListener(this,
                sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
                SensorManager.SENSOR_DELAY_GAME);
-       // ÎªÏµÍ³µÄ¹â´«¸ĞÆ÷×¢²á¼àÌıÆ÷
+       // ä¸ºç³»ç»Ÿçš„å…‰ä¼ æ„Ÿå™¨æ³¨å†Œç›‘å¬å™¨
        sensorManager.registerListener(this,
                sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT),
                SensorManager.SENSOR_DELAY_GAME);
@@ -62,29 +62,29 @@ public class MainActivity extends Activity implements SensorEventListener {
     
     @Override
     protected void onResume() {
-//    	if (SwitchButton.mSwitchOn==true) {
+    	if (SwitchButton.mSwitchOn==true) {
     		start();
-//    	}
+    	}
         super.onResume();
     }
     
     @Override
     protected void onStop() {
-        // ³ÌĞòÍË³öÊ±È¡Ïû×¢²á´«¸ĞÆ÷¼àÌıÆ÷
+        // ç¨‹åºé€€å‡ºæ—¶å–æ¶ˆæ³¨å†Œä¼ æ„Ÿå™¨ç›‘å¬å™¨ stop the sensor listener when the program exits
         sensorManager.unregisterListener(this);
         super.onStop();
     }
 
     @Override
     protected void onPause() {
-        // ³ÌĞòÔİÍ£Ê±È¡Ïû×¢²á´«¸ĞÆ÷¼àÌıÆ÷
+        // ç¨‹åºæš‚åœæ—¶å–æ¶ˆæ³¨å†Œä¼ æ„Ÿå™¨ç›‘å¬å™¨ stop the sensor sniffer while the program is paused
         sensorManager.unregisterListener(this);
         super.onPause();
     }
 
     @Override
     protected void onDestroy() {
-        // ³ÌĞòÏú»ÙÊ±È¡Ïû×¢²á´«¸ĞÆ÷¼àÌıÆ÷
+        // ç¨‹åºé”€æ¯æ—¶å–æ¶ˆæ³¨å†Œä¼ æ„Ÿå™¨ç›‘å¬å™¨ stop the sensor listener when the program is destroyed
         sensorManager.unregisterListener(this);
         super.onDestroy();
     }
@@ -92,26 +92,26 @@ public class MainActivity extends Activity implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         float[] values = event.values;
-        // Õæ»úÉÏ»ñÈ¡´¥·¢eventµÄ´«¸ĞÆ÷ÀàĞÍ
+        // çœŸæœºä¸Šè·å–è§¦å‘eventçš„ä¼ æ„Ÿå™¨ç±»å‹ Get the type of sensor that triggered the event on the real machine
         // Sensor sensorType = event.sensor;
-        // Ä£ÄâÆ÷ÉÏ»ñÈ¡´¥·¢eventµÄ´«¸ĞÆ÷ÀàĞÍ
+        // æ¨¡æ‹Ÿå™¨ä¸Šè·å–è§¦å‘eventçš„ä¼ æ„Ÿå™¨ç±»å‹ Get the type of sensor that triggered the event on the simulator
         Sensor sensorType = event.sensor;
         StringBuilder sb = null;
         sb = new StringBuilder();
-        // ÅĞ¶ÏÊÇÄÄ¸ö´«¸ĞÆ÷·¢Éú¸Ä±ä
-        //¹âÕÕ´«¸ĞÆ÷
+        // åˆ¤æ–­æ˜¯å“ªä¸ªä¼ æ„Ÿå™¨å‘ç”Ÿæ”¹å˜ Determine which sensor is changing
+        //å…‰ç…§ä¼ æ„Ÿå™¨ light sensor
         if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)) {
-            sb.append("µ±Ç°¹âµÄÇ¿¶ÈÎª£º");
+            sb.append("å½“å‰å…‰çš„å¼ºåº¦ä¸ºï¼š");
             sb.append(values[0]);
             etLight.setText(sb.toString());
         }
-        //´Å³¡´«¸ĞÆ÷
+        //ç£åœºä¼ æ„Ÿå™¨ Magnetic field sensor
         if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)) {
-            sb.append("X·½ÏòÉÏµÄµç´ÅÍ¨Á¿£º");
+            sb.append("Xæ–¹å‘ä¸Šçš„ç”µç£é€šé‡ï¼š");
             sb.append(values[0] + "\n");
-            sb.append("Y·½ÏòÉÏµÄµç´ÅÍ¨Á¿£º");
+            sb.append("Yæ–¹å‘ä¸Šçš„ç”µç£é€šé‡ï¼š");
             sb.append(values[1] + "\n");
-            sb.append("Z·½ÏòÉÏµÄµç´ÅÍ¨Á¿£º");
+            sb.append("Zæ–¹å‘ä¸Šçš„ç”µç£é€šé‡ï¼š");
             sb.append(values[2]);
             etTemerature.setText(sb.toString());
             float x = Math.abs(values[0]);
