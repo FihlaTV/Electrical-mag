@@ -9,6 +9,7 @@ import org.xclcharts.view.GraphicalView;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+
 import android.util.AttributeSet;
 import android.util.Log;
 
@@ -64,7 +65,7 @@ public class DialChart05View extends GraphicalView {
 				//设置指针长度
 				chart.getPointer().setLength(0.6f);
 				
-				//增加?
+				//增加direction
 				addAxis();						
 				/////////////////////////////////////////////////////////////
 				addPointer();
