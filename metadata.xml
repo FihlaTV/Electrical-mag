@@ -6,9 +6,6 @@
                 <rdf:Bag>
                     <rdf:li>Arial</rdf:li>
                     <rdf:li>Wingdings</rdf:li>
-                    <rdf:li>微软雅黑</rdf:li>
-                    <rdf:li>思源黑体 CN Bold</rdf:li>
-                    <rdf:li>造字工房版黑（非商用）常规体</rdf:li>
                 </rdf:Bag>
             </FontsUsed>
             <Keywords></Keywords>
@@ -117,8 +114,7 @@
             </TextInfo>
             <Styles>
                 <rdf:Bag>
-                    <rdf:li>默认图形</rdf:li>
-                    <rdf:li>默认美术字</rdf:li>
+                    <rdf:li>diagram</rdf:li>
                 </rdf:Bag>
             </Styles>
             <Fills>
