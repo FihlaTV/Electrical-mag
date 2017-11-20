@@ -100,7 +100,7 @@ public class DialChart05View extends GraphicalView {
 			}
 			chart.addOuterTicksAxis(0.7f, rlabels);
 			
-			//环形颜色?
+			//钟表颜色
 			List<Float> ringPercentage = new ArrayList<Float>();				
 			ringPercentage.add( 0.33f);
 			ringPercentage.add( 0.33f);
