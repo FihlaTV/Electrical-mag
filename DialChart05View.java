@@ -59,7 +59,7 @@ public class DialChart05View extends GraphicalView {
 				//绘制边框
 				chart.showRoundBorder();
 						
-				//设置当前百分?
+				//设置当前百分比
 				chart.getPointer().setPercentage(mPercentage);
 				
 				//设置指针长度
@@ -67,11 +67,11 @@ public class DialChart05View extends GraphicalView {
 				
 				//增加direction
 				addAxis();						
-				/////////////////////////////////////////////////////////////
+			
 				addPointer();
 				//设置附加信息
 				addAttrInfo();
-				/////////////////////////////////////////////////////////////
+		
 												
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
@@ -137,17 +137,6 @@ public class DialChart05View extends GraphicalView {
 			
 		}
 		
-		
-		private void addAttrInfo()
-		{
-	
-			
-		}
-		
-		public void addPointer()
-		{				
-
-		}
 		public void setCurrentStatus(float percentage)
 		{
 			//清理
