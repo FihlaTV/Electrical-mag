@@ -41,7 +41,7 @@ public class MainActivity extends Activity implements SensorEventListener {
             	if (state==true) {
             		start();
 				}else {
-					onPause();
+				      onPause();
 				}
 	                Log.d("switchButton", state ? "开 turn on":"关 turn off");  
 	                Toast.makeText(MainActivity.this, state ? "开 turn on":"关 turn off", Toast.LENGTH_SHORT).show();  
@@ -124,8 +124,6 @@ public class MainActivity extends Activity implements SensorEventListener {
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
+    public void onAccuracyChanged(Sensor sensor, int accuracy) 
     }
-    
 }
