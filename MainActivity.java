@@ -19,9 +19,9 @@ public class MainActivity extends Activity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		// 得到ActionBar get ActionBar
+		// 得到 ActionBar get ActionBar
 		ActionBar actionBar = getActionBar();
-		// 隐藏 hide
+		// 隐藏 Hide
 		actionBar.hide();
         setContentView(R.layout.activity_main);
       //初始化UI控件  Initialize the UI control
@@ -43,8 +43,8 @@ public class MainActivity extends Activity implements SensorEventListener {
 				}else {
 				      onPause();
 				}
-	                Log.d("switchButton", state ? "开 turn on":"关 turn off");  
-	                Toast.makeText(MainActivity.this, state ? "开 turn on":"关 turn off", Toast.LENGTH_SHORT).show();  
+	                Log.d("switchButton", state ? "turn on":"turn off");  
+	                Toast.makeText(MainActivity.this, state ? "turn on":"turn off", Toast.LENGTH_SHORT).show();  
 	            }  
 	        });
     }
