@@ -23,7 +23,6 @@ public class DialChart05View extends GraphicalView {
 	
 	public DialChart05View(Context context) {
 		super(context);
-		// TODO Auto-generated constructor stub
 		initView();
 	}
 	
