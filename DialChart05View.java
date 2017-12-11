@@ -23,8 +23,9 @@ public class DialChart05View extends GraphicalView {
 	float mP2 =  0.0f;
 	
 	public DialChart05View(Context context) {
+		
 		super(context);
-		// TODO Auto-generated constructor stub
+
 		initView();
 	}
 	
@@ -143,7 +144,7 @@ public class DialChart05View extends GraphicalView {
 			chart.clearAll();
 					
 			mPercentage =  percentage;
-			//设置当前百分%?
+			//设置当前百分比
 			chart.getPointer().setPercentage(mPercentage);
 			addAxis();						
 			addPointer();
