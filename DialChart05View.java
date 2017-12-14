@@ -57,20 +57,20 @@ public class DialChart05View extends GraphicalView {
 				//设置标题背景			
 				chart.setApplyBackgroundColor(true);
 				chart.setBackgroundColor( Color.rgb(28, 129, 243) );
-				//绘制边框
+				//绘制边框 set frame
 				chart.showRoundBorder();
 						
-				//设置当前百分比
+				//设置当前百分比 set current percentage
 				chart.getPointer().setPercentage(mPercentage);
 				
-				//设置指针长度
+				//设置指针长度 set the length of pointer
 				chart.getPointer().setLength(0.6f);
 				
-				//增加direction
+				//增加方向 add direction
 				addAxis();						
 			
 				addPointer();
-				//设置附加信息
+				//设置附加信息 set additional information
 				addAttrInfo();
 		
 												
