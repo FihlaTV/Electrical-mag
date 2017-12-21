@@ -105,9 +105,9 @@ public class MainActivity extends Activity implements SensorEventListener {
             sb.append(values[0]);
             etLight.setText(sb.toString());
         }
-	    //The X axis is horizontal and points to the right, 
+	    //The X axis is horizontal and points to the right
 	    //the Y axis is vertical and points up
-	    //the Z axis points towards the outside of the front face of the screen.
+	    //the Z axis points towards the outside of the front face of the screen
         //磁场传感器 Magnetic field sensor
         if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)) {
             sb.append("X方向上的电磁通量：Electromagnetic flux in the X direction: ");
