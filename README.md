@@ -1,6 +1,6 @@
 # Electrical-mag
 
-Hello hackers!
+Hello
 
 This project(Android app) is used for detecting the tensity of electromagnetic radiation
 
