@@ -10,14 +10,14 @@ import android.hardware.SensorEventListener;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements SensorEventListener {
+public class MainActivity extends Activity implements SensorEventListener{
 	
 	private TextView etOrientation, etMagnetic, etTemerature, etLight, etPressure;
    	private SensorManager sensorManager;
    	DialChart05View chart5 = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 		// 得到 ActionBar get ActionBar
 		ActionBar actionBar = getActionBar();
@@ -34,10 +34,10 @@ public class MainActivity extends Activity implements SensorEventListener {
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         	Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ALL);
 	        SwitchButton sb = (SwitchButton) findViewById(R.id.wiperSwitch1);  
-	        sb.setOnChangeListener(new OnChangeListener() {  
+	        sb.setOnChangeListener(new OnChangeListener(){  
               
             @Override  
-            public void onChange(SwitchButton sb, boolean state) {  
+            public void onChange(SwitchButton sb, boolean state){  
             	if (state==true) {
             		start();
 				}else {
