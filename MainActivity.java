@@ -76,7 +76,7 @@ public class MainActivity extends Activity implements SensorEventListener{
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause(){
         // 程序暂停时取消注册传感器监听器 stop the sensor sniffer while the program is paused
         sensorManager.unregisterListener(this);
         super.onPause();
