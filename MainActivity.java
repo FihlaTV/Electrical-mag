@@ -38,9 +38,9 @@ public class MainActivity extends Activity implements SensorEventListener{
               
             @Override  
             public void onChange(SwitchButton sb, boolean state){  
-            	if (state==true) {
+            	if (state==true){
             		start();
-				}else {
+				}else{
 				    onPause();
 				}
 	                Log.d("switchButton", state ? "turn on":"turn off");  
@@ -61,7 +61,7 @@ public class MainActivity extends Activity implements SensorEventListener{
    }
     
     @Override
-    protected void onResume() {
+    protected void onResume(){
     	if (SwitchButton.mSwitchOn==true) {
     		start();
     	}
@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements SensorEventListener{
     }
     
     @Override
-    protected void onStop() {
+    protected void onStop(){
         // 程序退出时取消注册传感器监听器 stop the sensor listener when the program exits
         sensorManager.unregisterListener(this);
         super.onStop();
