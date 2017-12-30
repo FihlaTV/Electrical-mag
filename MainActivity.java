@@ -83,14 +83,14 @@ public class MainActivity extends Activity implements SensorEventListener{
     }
 
     @Override
-    protected void onDestroy() {
+    protected void onDestroy(){
         // 程序销毁时取消注册传感器监听器 stop the sensor listener when the program is destroyed
         sensorManager.unregisterListener(this);
         super.onDestroy();
     }
 
     @Override
-    public void onSensorChanged(SensorEvent event) {
+    public void onSensorChanged(SensorEvent event){
         float[] values = event.values;
         // 真机上获取触发event的传感器类型 Get the type of sensor that triggered the event on the real machine
         // Sensor sensorType = event.sensor;
@@ -100,7 +100,7 @@ public class MainActivity extends Activity implements SensorEventListener{
         sb = new StringBuilder();
         // 判断是哪个传感器发生改变 Determine which sensor is changing
         //光照传感器 light sensor
-        if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)) {
+        if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)){
             sb.append("当前光的强度为：current brightness");
             sb.append(values[0]);
             etLight.setText(sb.toString());
@@ -109,7 +109,7 @@ public class MainActivity extends Activity implements SensorEventListener{
 	    //the Y axis is vertical and points up
 	    //the Z axis points towards the outside of the front face of the screen
         //磁场传感器 Magnetic field sensor
-        if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)) {
+        if (sensorType == sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)){
             sb.append("X方向上的电磁通量：Electromagnetic flux in the X direction: ");
             sb.append(values[0] + "\n");
             sb.append("Y方向上的电磁通量：Electromagnetic flux in the Y direction: ");
