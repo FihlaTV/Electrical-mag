@@ -135,7 +135,6 @@ public class DialChart05View extends GraphicalView{
 			chart.getPlotAxis().get(2).getTickMarksPaint().setColor(Color.WHITE);
 			chart.getPlotAxis().get(2).getTickLabelPaint().setColor(Color.WHITE);
 		
-			
 		}
 		
 		public void setCurrentStatus(float percentage)
