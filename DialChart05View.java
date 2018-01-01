@@ -52,7 +52,7 @@ public class DialChart05View extends GraphicalView{
 			
 	 public void chartRender()
 		{
-			try {								
+			try{								
 							
 				//设置标题背景			
 				chart.setApplyBackgroundColor(true);
