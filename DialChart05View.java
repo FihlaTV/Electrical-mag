@@ -13,7 +13,7 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
 
-public class DialChart05View extends GraphicalView{
+public class DialChart05View extends GraphicalView {
 	
 	private String TAG = "DialChart05View";	
 	private DialChart chart = new DialChart();
