@@ -22,7 +22,7 @@ public class DialChart05View extends GraphicalView {
 	float mP1 = 0.0f;
 	float mP2 =  0.0f;
 	
-	public DialChart05View(Context context) {
+	public DialChart05View(Context context){
 		
 		super(context);
 
