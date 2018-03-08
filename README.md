@@ -1,7 +1,4 @@
-# Electrical-mag
+# Electrical Magnetic App
 
-This project(Android app) is used for detecting the tensity of electromagnetic radiation
+An Android App that is used for detecting intensity of electromagnetic radiations
 
-I am trying to create more useful app!
-
-Cheers!
