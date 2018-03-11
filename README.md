@@ -27,4 +27,7 @@ Finish the installation and you are good to go
 Android Studio (https://developer.android.com/index.html)
 
 ## Intro
-Chart: ybp.png
+Chart:
+Location:
+Share and Save buttons:
+Database:
