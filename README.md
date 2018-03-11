@@ -25,3 +25,6 @@ Finish the installation and you are good to go
 ## Tools and References
 
 Android Studio (https://developer.android.com/index.html)
+
+## Intro
+Chart: ybp.png
