@@ -26,8 +26,4 @@ Finish the installation and you are good to go
 
 Android Studio (https://developer.android.com/index.html)
 
-## Intro
-Chart:
-Location:
-Share and Save buttons:
-Database:
+
