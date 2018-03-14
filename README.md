@@ -18,7 +18,7 @@ An Android phone (Note: does NOT work on iOS system)
 
 ### Installing
 
-Scan this QR code and follow the instructions
+Scan this QR code and follow the instructions (Coming soon!)
 
 Finish the installation and you are good to go
 
